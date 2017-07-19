@@ -12,11 +12,21 @@ Details volgen nog. Voor nu kun je contact opnemen met frontcore@mellewynia.nl o
 
 ____
 
-### To do
+### FASE 0
+
+1. Start community — _CHECK_
+2. Registratie website
+
+### FASE 1
+
+1. Website met (leden) index
+2. Website / Informeer over front-end gebieden
+
+### FASE 2
 
 1. Eerste meet-up organiseren
-2. Website / Leden index (incl. filter)
-3. Website / Informeer over front-end gebieden
+2. Filter voor index
+3. Sterke punten per profiel in kaart brengen en automatisch uitlichten
 
 ----
 

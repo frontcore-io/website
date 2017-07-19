@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Front Core</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100, 200,300,400,500" rel="stylesheet">
+    <style>
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            cursor: default;
+            background: #8A1C7C;
+            min-height: 100vh;
+            background-image: linear-gradient(45deg, #321325, #8A1C7C);
+        }
+
+        /* Header */
+
+        .header {
+            animation: 2.6s HEADER;
+        }
+
+        @keyframes HEADER {
+            0% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Logo */
+
+        .header__logo {
+            display: block;
+            margin: 26vh auto 0 auto;
+            animation: 2s infinite LOGO;
+        }
+
+        @keyframes LOGO {
+            0% {
+                transform: scale(1);
+            }
+            35% {
+                transform: scale(1);
+            }
+            45% {
+                transform: scale(1.1);
+            }
+            50% {
+                transform: scale(1);
+            }
+            55% {
+                transform: scale(1.1);
+            }
+            65% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Title */
+
+        .header__title {
+            margin: 20px 0 38px 0;
+            padding: 0;
+            text-align: center; 
+            color: #fff;
+            font-size: 26px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 200;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            word-spacing: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <svg width="62" height="62" class="header__logo">
+            <circle cx="31" cy="31" r="20" fill="transparent" stroke="#fff" stroke-width="1.5"/>
+        </svg>
+
+        <h1 class="header__title">
+            Front Core
+        </h1>
+    </header>
+
+    <!--<a href="https://github.com/frontcore-io">GitHub</a>-->
+
+</body>
+</html>
