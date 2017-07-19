@@ -1,35 +1,30 @@
-# Front Core
+# front-core-index
 
-> Nederlandse freelance front-end developers community
+> Front Core Index
 
-Front Core verbindt front-end developers met elkaar.  Van elk lid worden referenties nagelopen, wordt minstens jaarlijks één (co-)publicatie verwacht en zo af en toe wat input in de community. ‘Lid zijn van Front Core’ is als een keurmerk om trots op te zijn. 
+## Build Setup
 
-____
+``` bash
+# install dependencies
+npm install
 
-### Deelname criteria
+# serve with hot reload at localhost:8080
+npm run dev
 
-Details volgen nog. Voor nu kun je contact opnemen met frontcore@mellewynia.nl om lid te worden.
+# build for production with minification
+npm run build
 
-____
+# build for production and view the bundle analyzer report
+npm run build --report
 
-### FASE 0
+# run unit tests
+npm run unit
 
-1. Start community — _CHECK_
-2. Registratie website
+# run e2e tests
+npm run e2e
 
-### FASE 1
+# run all tests
+npm test
+```
 
-1. Website met (leden) index
-2. Website / Informeer over front-end gebieden
-
-### FASE 2
-
-1. Eerste meet-up organiseren
-2. Filter voor index
-3. Sterke punten per profiel in kaart brengen en automatisch uitlichten
-
-----
-
-### Milestones
-
-2017-07-15 — Website frontcore.io geregistreerd!
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
