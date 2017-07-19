@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    Test Sven
     <h1>{{ msg }}</h1>
   </div>
 </template>
