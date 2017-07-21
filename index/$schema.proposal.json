@@ -45,6 +45,7 @@
 			]
 		},
 		"proficiencyLevelEnum": {
+			"description": "Your experience in this proficiency.",
 			"oneOf": [
 				{
 					"description": "No experience. You really shouldn't list this unless necessary.",

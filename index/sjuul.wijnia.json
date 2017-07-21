@@ -1,7 +1,42 @@
 {
 	"$schema": "./$schema.json",
+	"joinDate": "2017-07-20",
 	"firstName": "Sjuul",
-	"lastNamePrefix": "",
 	"lastName": "Wijnia",
-	"haha": ""
+	"phone": "0610745971",
+	"email": "sjuulwijnia@gmail.com",
+	"linkedIn": "https://www.linkedin.com/in/sjuul-wijnia-a75b719a/",
+	"gitHub": "https://github.com/sjuulwijnia",
+	"consultancy": {
+		"level": "***--"
+	},
+	"lead": {
+		"level": "*----"
+	},
+	"design": {
+		"level": "**---"
+	},
+	"frontend": {
+		"level": "****-",
+		"languages": [
+			"JavaScript",
+			"TypeScript",
+			"Pug",
+			"JSON Schema"
+		],
+		"frameworks": [
+			"Angular",
+			"AngularJS",
+			"FontoXML"
+		]
+	},
+	"backend": {
+		"level": "***--",
+		"languages": [
+			"C#"
+		],
+		"frameworks": [
+			"NHibernate"
+		]
+	}
 }
