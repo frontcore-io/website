@@ -1,0 +1,67 @@
+{
+	"$schema": "./$schema.proposal.json",
+	"developer": {
+		"firstName": "Sjuul",
+		"lastName": "Wijnia",
+		"joinDate": "2017-07-20",
+		"phone": [
+			"0610745971",
+			"+31610745971"
+		],
+		"email": [
+			"sjuulwijnia@gmail.com"
+		],
+		"links": {
+			"linkedIn": "https://www.linkedin.com/in/sjuul-wijnia-a75b719a/",
+			"gitHub": "https://github.com/sjuulwijnia",
+			"google": "https://plus.google.com/103843431901783823268",
+			"other": {
+				"YouTube": "https://www.youtube.com/channel/UC8lGpHhIVuMtzuCWgodD_Bw"
+			}
+		}
+	},
+	"skills": {
+		"backend": {
+			"experience": "***--",
+			"languages": [
+				"C#"
+			],
+			"frameworks": [
+				"NHibernate"
+			]
+		},
+		"frontend": {
+			"experience": "****-",
+			"languages": [
+				"JavaScript",
+				"TypeScript",
+				"Pug",
+				{
+					"label": "JSON Schema",
+					"experience": "***--",
+					"url": "http://json-schema.org/"
+				}
+			],
+			"frameworks": [
+				{
+					"label": "Angular",
+					"experience": "****-",
+					"url": "https://angular.io/"
+				},
+				"AngularJS",
+				"FontoXML"
+			]
+		},
+		"other": {
+			"Consultancy": "***--",
+			"Lead": "*----",
+			"Design": {
+				"experience": "**---",
+				"techniques": [
+					"UX",
+					"Atomic"
+				]
+			}
+		}
+	}
+}

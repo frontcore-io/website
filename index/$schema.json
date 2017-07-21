@@ -1,0 +1,158 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema",
+	"$id": "https://github.com/frontcore-io/index/index/$schema.json",
+	"title": "Frontcore IO Developer Schema",
+	"definitions": {
+		"languageCapabilities": {
+			"type": "object",
+			"allOf": [
+				{
+					"$ref": "#/definitions/skillLevel"
+				},
+				{
+					"properties": {
+						"languages": {
+							"description": "The languages you're familiar/proficient with.",
+							"$ref": "#/definitions/stringArray"
+						},
+						"frameworks": {
+							"description": "The frameworks you're familiar/proficient with.",
+							"$ref": "#/definitions/stringArray"
+						},
+						"techniques": {
+							"description": "The techniques you're familiar/proficient with.",
+							"$ref": "#/definitions/stringArray"
+						}
+					}
+				}
+			]
+		},
+		"phoneNumber": {
+			"type": "string",
+			"pattern": "^[0-9]{10}$"
+		},
+		"skillLevel": {
+			"type": "object",
+			"properties": {
+				"level": {
+					"description": "Mastery of this category.",
+					"$ref": "#/definitions/skillLevelEnum"
+				}
+			},
+			"required": [
+				"level"
+			]
+		},
+		"skillLevelEnum": {
+			"enum": [
+				"-----",
+				"*----",
+				"**---",
+				"***--",
+				"****-",
+				"*****"
+			]
+		},
+		"stringArray": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"uniqueItems": true,
+			"default": []
+		}
+	},
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"description": "That thing that validates this JSON.",
+			"type": "string",
+			"format": "uri"
+		},
+		"joinDate": {
+			"description": "The date you joined Frontcore.",
+			"type": "string",
+			"format": "date-time"
+		},
+		"firstName": {
+			"description": "Your first name.",
+			"type": "string",
+			"required": []
+		},
+		"lastNamePrefix": {
+			"description": "(Optional) Your last name prefix ('tussenvoegsel').",
+			"type": "string"
+		},
+		"lastName": {
+			"description": "Your last name.",
+			"type": "string",
+			"required": []
+		},
+		"phone": {
+			"description": "(Optional) Phone number you can be reached at.",
+			"$ref": "#/definitions/phoneNumber"
+		},
+		"email": {
+			"description": "(Optional) Email address you can be reached at.",
+			"type": "string",
+			"format": "email"
+		},
+		"url": {
+			"description": "(Optional) Link to your own website.",
+			"type": "string",
+			"format": "url"
+		},
+		"linkedIn": {
+			"description": "(Optional) Link to your LinkedIn profile.",
+			"type": "string",
+			"format": "url",
+			"pattern": "^https://(www.)?linkedin.com/in/"
+		},
+		"gitHub": {
+			"description": "(Optional) Link to your GitHub profile.",
+			"type": "string",
+			"format": "url",
+			"pattern": "^https://(www.)?github.com/"
+		},
+		"consultancy": {
+			"description": "(Optional) How high you'd rate your consultancy abilities.",
+			"$ref": "#/definitions/skillLevel",
+			"additionalProperties": false
+		},
+		"lead": {
+			"description": "(Optional) How high you'd rate your leadership abilities.",
+			"$ref": "#/definitions/skillLevel",
+			"additionalProperties": false
+		},
+		"design": {
+			"description": "(Optional) Design capabilties.",
+			"allOf": [
+				{
+					"$ref": "#/definitions/skillLevel"
+				},
+				{
+					"properties": {
+						"skills": {
+							"description": "List of your design skills.",
+							"$ref": "#/definitions/stringArray"
+						}
+					}
+				}
+			]
+		},
+		"frontend": {
+			"description": "(Optional) Frontend capabilities.",
+			"$ref": "#/definitions/languageCapabilities"
+		},
+		"backend": {
+			"description": "(Optional) Backend capabilities.",
+			"$ref": "#/definitions/languageCapabilities"
+		}
+	},
+	"required": [
+		"joinDate",
+		"firstName",
+		"lastName"
+	],
+	"additionalProperties": false
+}

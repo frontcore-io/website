@@ -1,0 +1,280 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema",
+	"$id": "https://github.com/frontcore-io/index/index/$schema.proposal.json",
+	"title": "Frontcore IO Developer Schema (Proposal)",
+	"type": "object",
+	"definitions": {
+		"phoneNumber": {
+			"type": "string",
+			"pattern": "^\\+?[0-9]{10,11}$"
+		},
+		"proficiencyArea": {
+			"type": "object",
+			"allOf": [
+				{
+					"$ref": "#/definitions/proficiencyLevel"
+				},
+				{
+					"properties": {
+						"languages": {
+							"description": "(Optional) The (programming) languages you're proficient with in this area.",
+							"$ref": "#/definitions/proficiencyRefArray"
+						},
+						"frameworks": {
+							"description": "(Optional) The frameworks you're proficient with in this area.",
+							"$ref": "#/definitions/proficiencyRefArray"
+						},
+						"techniques": {
+							"description": "(Optional) The techniques you're proficient with in this area.",
+							"$ref": "#/definitions/proficiencyRefArray"
+						}
+					}
+				}
+			]
+		},
+		"proficiencyLevel": {
+			"type": "object",
+			"properties": {
+				"experience": {
+					"description": "Experience in this proficiency.",
+					"$ref": "#/definitions/proficiencyLevelEnum"
+				}
+			},
+			"required": [
+				"experience"
+			]
+		},
+		"proficiencyLevelEnum": {
+			"oneOf": [
+				{
+					"description": "No experience. You really shouldn't list this unless necessary.",
+					"enum": [
+						"-----"
+					]
+				},
+				{
+					"description": "Fundamental awareness: you have a common knowledge or an understanding of basic techniques and concepts.",
+					"enum": [
+						"*----"
+					]
+				},
+				{
+					"description": "Novice: you have the level of experience gained in a classroom and/or experimental scenarios or as a trainee on-the-job. You are expected to need help when performing this skill.",
+					"enum": [
+						"**---"
+					]
+				},
+				{
+					"description": "Intermediate experience: you are able to successfully complete tasks in this competency as requested. Help from an expert may be required from time to time, but you can usually perform the skill independently.",
+					"enum": [
+						"***--"
+					]
+				},
+				{
+					"description": "Advanced experience: you can perform the actions associated with this skill without assistance. You are certainly recognized within your immediate organization as \"a person to ask\" when difficult questions arise regarding this skill.",
+					"enum": [
+						"****-"
+					]
+				},
+				{
+					"description": "Expert: you are known as an expert in this area. You can provide guidance, troubleshoot and answer questions related to this area of expertise and the field where the skill is used.",
+					"enum": [
+						"*****"
+					]
+				}
+			]
+		},
+		"proficiencyRef": {
+			"oneOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "object",
+					"properties": {
+						"experience": {
+							"$ref": "#/definitions/proficiencyLevelEnum"
+						},
+						"label": {
+							"description": "Label for this proficiency.",
+							"type": "string"
+						},
+						"url": {
+							"description": "URL to the website for this proficiency.",
+							"type": "string",
+							"format": "url"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"label"
+					]
+				}
+			]
+		},
+		"proficiencyRefArray": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/proficiencyRef"
+			},
+			"uniqueItems": true,
+			"default": []
+		},
+		"stringArray": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"uniqueItems": true,
+			"default": []
+		}
+	},
+	"properties": {
+		"$schema": {
+			"type": "string",
+			"format": "uri"
+		},
+		"developer": {
+			"description": "All information that could be useful in contacting you.",
+			"type": "object",
+			"properties": {
+				"joinDate": {
+					"description": "The date you joined Frontcore.",
+					"type": "string",
+					"format": "date-time"
+				},
+				"firstName": {
+					"description": "Your first name.",
+					"type": "string",
+					"required": []
+				},
+				"lastNamePrefix": {
+					"description": "(Optional) Your last name prefix ('tussenvoegsel').",
+					"type": "string"
+				},
+				"lastName": {
+					"description": "Your last name.",
+					"type": "string",
+					"required": []
+				},
+				"phone": {
+					"description": "(Optional) Phone number(s) you can be reached at.",
+					"oneOf": [
+						{
+							"$ref": "#/definitions/phoneNumber"
+						},
+						{
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"$ref": "#/definitions/phoneNumber"
+							}
+						}
+					]
+				},
+				"email": {
+					"description": "(Optional) Email address(es) you can be reached at.",
+					"oneOf": [
+						{
+							"type": "string",
+							"format": "email"
+						},
+						{
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "string",
+								"format": "email"
+							}
+						}
+					]
+				},
+				"links": {
+					"description": "(Optional) Websites/social media you can be reached at.",
+					"type": "object",
+					"properties": {
+						"facebook": {
+							"description": "(Optional) Your Facebook profile.",
+							"type": "string",
+							"format": "url",
+							"pattern": "^https://(www.)?facebook.com/"
+						},
+						"gitHub": {
+							"description": "(Optional) Your GitHub profile.",
+							"type": "string",
+							"format": "url",
+							"pattern": "^https://(www.)?github.com/"
+						},
+						"google": {
+							"description": "(Optional) Your Google+ profile.",
+							"type": "string",
+							"format": "url",
+							"pattern": "^https://plus.google.com/"
+						},
+						"home": {
+							"description": "(Optional) Your homepage.",
+							"type": "string",
+							"format": "url"
+						},
+						"linkedIn": {
+							"description": "(Optional) Your LinkedIn profile.",
+							"type": "string",
+							"format": "url",
+							"pattern": "^https://(www.)?linkedin.com/in/"
+						},
+						"other": {
+							"description": "(Optional) Contains all other websites. These will show up without an official icon.",
+							"type": "object",
+							"additionalProperties": {
+								"description": "An unmarked website.",
+								"type": "string",
+								"format": "url"
+							}
+						}
+					}
+				}
+			},
+			"required": [
+				"joinDate",
+				"firstName",
+				"lastName"
+			],
+			"additionalProperties": false
+		},
+		"skills": {
+			"description": "Your skills! Quite important, one would say.",
+			"type": "object",
+			"properties": {
+				"backend": {
+					"description": "(Optional) Your backend experience.",
+					"$ref": "#/definitions/proficiencyArea"
+				},
+				"frontend": {
+					"description": "(Optional) Your backend experience.",
+					"$ref": "#/definitions/proficiencyArea"
+				},
+				"other": {
+					"description": "(Optional) Other proficiencies you'd like to list.",
+					"type": "object",
+					"additionalProperties": {
+						"description": "A category or skill.",
+						"oneOf": [
+							{
+								"$ref": "#/definitions/proficiencyLevelEnum"
+							},
+							{
+								"$ref": "#/definitions/proficiencyArea"
+							}
+						]
+					}
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"required": [
+		"developer",
+		"skills"
+	],
+	"additionalProperties": false
+}
