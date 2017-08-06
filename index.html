@@ -12,16 +12,30 @@
         }
 
         html {
+            overflow-y: scroll;
             cursor: default;
             background: #8A1C7C;
             min-height: 100vh;
             background-image: linear-gradient(45deg, #321325, #8A1C7C);
+            font-size: 10px;
+        }
+
+        html::-webkit-scrollbar {
+            width: 5px;
+            height: 8px;
+            background-color: transparent; /* or add it to the track */
+        }
+
+        html::-webkit-scrollbar-thumb {
+            background-color: #fff;
         }
 
         /* Header */
 
         .header {
+            position: relative;
             animation: 2.6s HEADER;
+            padding: 26vh 0 10vh 0;
         }
 
         @keyframes HEADER {
@@ -39,8 +53,8 @@
 
         .header__logo {
             display: block;
-            margin: 26vh auto 0 auto;
-            animation: 2s infinite LOGO;
+            margin: 0 auto;
+            animation: 2s 2 LOGO;
         }
 
         @keyframes LOGO {
@@ -72,14 +86,78 @@
         .header__title {
             margin: 20px 0 38px 0;
             padding: 0;
-            text-align: center; 
+            text-align: center;
             color: #fff;
-            font-size: 26px;
+            font-size: 28px;
             font-family: 'Raleway', sans-serif;
             font-weight: 200;
             text-transform: uppercase;
             letter-spacing: 4px;
             word-spacing: 10px;
+        }
+
+        /* Subtitle */
+
+        .header__subtitle {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            top: 1.6rem;
+            left: 1.6rem;
+            padding: 0;
+            color: #fff;
+            font-size: 1rem;
+            font-family: 'Fira Code', monospace;
+            text-transform: uppercase;
+            font-weight: 200;
+            letter-spacing: 1px;
+            word-spacing: 3px;
+            line-height: 1;
+        }
+
+        /* TODO: This could be nicer? */
+
+        .header__subtitle > span {
+          opacity: 0.38;
+        }
+
+        .header__subtitle:after /* cursor */ {
+          content: ' ';
+          display: inline-block;
+          position: absolute;
+          background: #fff;
+          height: 1.1rem;
+          margin: -0.1rem 0 0 0.4rem;
+          width: 0.7rem;
+          animation: 1000ms infinite BLINKING;
+        }
+
+        @keyframes BLINKING {
+          0% {
+            opacity: 0;
+          }
+          38% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+        }
+
+        /*  */
+
+        .header__buttons {
+          position: absolute;
+          top: 0;
+          right: 1rem;
+        }
+
+        .header__buttons > a {
+          display: inline-block;
+          padding: 1.2rem 1rem;
+          color: #fff;
+          font-size: 1rem;
+          font-family: 'Raleway', sans-serif;
         }
 
     </style>
@@ -94,6 +172,24 @@
         <h1 class="header__title">
             Front Core
         </h1>
+        <h4 class="header__subtitle">
+          ~<span>/</span>freelance<span>/</span>front-end<span>/</span>developers<span>@</span>nederland<span>$</span></h4>
+        <div class="header__buttons">
+          <a href="#">
+            Github
+          </a>
+          <!--
+          <a href="#info">
+            Achtergrond
+          </a>
+          <a href="#">
+            Contact
+          </a>
+          <a href="#">
+            Sluit je aan
+          </a>
+          -->
+        </div>
     </header>
 
     <div id="app"></div>
