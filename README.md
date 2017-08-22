@@ -2,11 +2,11 @@
 
 > Nederlandse freelance front-end developers community
 
-Front Core verbindt front-end developers met elkaar.  Van elk lid worden referenties nagelopen, wordt minstens jaarlijks één (co-)publicatie verwacht en zo af en toe wat input in de community. ‘Lid zijn van Front Core’ is als een keurmerk om trots op te zijn.
+Front Core verbindt front-end developers met elkaar. We bespreken onze ervaringen, delen tips en hebben een plek om te sparren. Zo leren we van elkaar en zetten we stappen vooruit. ‘Lid zijn van Front Core’ is als een keurmerk om trots op te zijn.
 
 ____
 
-### Deelname criteria
+### Lid worden
 
 Details volgen nog. Voor nu kun je contact opnemen met frontcore@mellewynia.nl om lid te worden.
 

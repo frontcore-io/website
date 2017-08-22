@@ -48,7 +48,7 @@ export default {
 
 .members > * {
   margin: 0 0 2rem 2rem;
-  min-width: 20rem;
+  min-width: 26rem;
   max-width: 30rem;
 }
 </style>

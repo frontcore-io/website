@@ -1,51 +1,45 @@
+
 {
-    "joinDate": "2017-07-20",
-
-    "firstName": "Melle",
-    "tussenvoegsel": "",
-    "lastName": "Wynia",
-
-    "phone": "0641017611",
-    "email": "frontcore@mellewynia.nl",
-    "url": "https://mellewynia.nl",
-    "linkedIn": "https://www.linkedin.com/in/melle-wynia/",
-    "gitHub": "https://github.com/mellewynia",
-
-    "consultancy": {
-      "level": "**---"
-    },
-
-    "lead": {
-      "level": "***--"
-    },
-
-    "design": {
-      "level": "**---",
-      "skills": [
-        "UX",
-        "Atomic"
-      ]
-    },
-
-    "frontend": {
-      "level": "****-",
-      "languages": [
-        "JavaScript",
-        "TypeScript",
-        "Pug"
-      ],
-      "frameworks": [
-        "Angular",
-        "Vue.js"
-      ],
-      "techniques": [
-        ""
-      ]
-    },
-
-    "backend": {
-      "level": "***--",
-      "languages": [""]
-    }
-
+	"$schema": "./$schema.json",
+	"joinDate": "2017-07-20",
+	"firstName": "Melle",
+	"lastNamePrefix": "",
+	"lastName": "Wynia",
+	"phone": "0641017611",
+	"email": "frontcore@mellewynia.nl",
+	"url": "https://mellewynia.nl",
+	"linkedIn": "https://www.linkedin.com/in/melle-wynia/",
+	"gitHub": "https://github.com/mellewynia",
+	"consultancy": {
+		"level": "**---"
+	},
+	"lead": {
+		"level": "***--"
+	},
+	"design": {
+		"level": "***--",
+		"skills": [
+			"UX",
+			"Atomic"
+		]
+	},
+	"frontend": {
+		"level": "****-",
+		"languages": [
+			"JavaScript",
+			"TypeScript",
+			"Pug"
+		],
+		"frameworks": [
+			"Angular",
+			"Vue.js"
+		],
+		"techniques": []
+	},
+	"backend": {
+		"level": "***--",
+		"languages": [
+			""
+		]
+	}
 }
